@@ -75,7 +75,7 @@ if(para.grid[ind, "method"] == 1){ # Subsampling
   RunTime <- microbenchmark(isotropy_subsampling(data = datas[[1]], lagmat = lags[[para.grid[ind, "lag"]]], A = As[[para.grid[ind, "lag"]]],
                                                  estimator = estimator[para.grid[ind, "estimator"]],
                                                  window.dims = window.subsampling[para.grid[ind, "size"] ,], edge = TRUE))
-  save(RunTime, file = paste0("/work/smjnkoen/Robust_Isotropytest/Laufzeit/grid", para.grid[ind, "size"], ".lag", para.grid[ind, "lag"], ".estimator", para.grid[ind, "estimator"],
+  save(RunTime, file = paste0("Runtimes/grid", para.grid[ind, "size"], ".lag", para.grid[ind, "lag"], ".estimator", para.grid[ind, "estimator"],
                               ".methodSubsampling.RData"))
   
 } else{ # blockpermutation
