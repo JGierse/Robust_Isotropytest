@@ -74,7 +74,7 @@ res <- array(dim = c(3,2,2,3,3,3,2,2,3), dimnames = list("estimator" = c("Mather
                                                          "blocktype" = c("random", "rectangle", "square")))
 
 for(ind in 1:nrow(combs.block)){
-  load(paste0("C:/Users/paulg/Sciebo2/Paper_2/R-Code/Robust-Isotropytest/Paper/Results/Block/", combs.block$Method[ind], ".block.", combs.block$Block.type[ind], ".vario", combs.block$variogram[ind], ".grid", combs.block$gridsize[ind]  ,".range", combs.block$range[ind],
+  load(paste0("Results/Block/", combs.block$Method[ind], ".block.", combs.block$Block.type[ind], ".vario", combs.block$variogram[ind], ".grid", combs.block$gridsize[ind]  ,".range", combs.block$range[ind],
               ".nugget", combs.block$nugget[ind],".l", combs.block$LAGS[ind], ".rotation", combs.block$rotation[ind], ".scale", combs.block$scale[ind], 
               ".amount", combs.block$Amount[ind], ".dist", combs.block$Dist[ind], ".RData"))
   
