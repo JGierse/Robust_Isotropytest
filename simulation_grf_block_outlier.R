@@ -56,4 +56,4 @@ res_block <- future_lapply(1:1000, function(x) isotropy_test(datas[[x]], lagmat 
 
 save(res_block, file = paste0("Results/Block/", combs.block$Method[ind], " block.", combs.block$Block.type[ind], ".vario", combs.block$variogram[ind], ".grid", combs.block$gridsize[ind]  ,".range", combs.block$range[ind],
                             ".nugget", combs.block$nugget[ind],".l", combs.block$LAGS[ind], ".rotation", combs.block$rotation[ind], ".scale", combs.block$scale[ind], 
-                            ".window", combs.block$Window[ind], ".amount", combs.block$Amount[ind], ".dist", combs.block$Dist[ind], ".RData"))
+                             ".amount", combs.block$Amount[ind], ".dist", combs.block$Dist[ind], ".RData"))
