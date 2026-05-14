@@ -74,7 +74,7 @@ res <- array(dim = c(3,2,2,3,3,3,2,2), dimnames = list("estimator" = c("Matheron
                                                        "dist" = c(1,2)))
 
 for(ind in 1:nrow(combs.iso)){
-  load(paste0("Results/Iso/", combs.iso$Method[ind],".vario", combs.iso$variogram[ind], ".grid", combs.iso$gridsize[ind]  ,".range", combs.iso$range[ind],
+  load(paste0("C:/Users/paulg/Sciebo2/Paper_2/R-Code/Robust-Isotropytest/Paper/Results/Iso/", combs.iso$Method[ind],".vario", combs.iso$variogram[ind], ".grid", combs.iso$gridsize[ind]  ,".range", combs.iso$range[ind],
               ".nugget", combs.iso$nugget[ind],".l", combs.iso$LAGS[ind], ".rotation", combs.iso$rotation[ind], ".scale", combs.iso$scale[ind], 
               ".amount", combs.iso$Amount[ind], ".dist", combs.iso$Dist[ind], ".RData"))
   
@@ -94,7 +94,7 @@ for(ind in 1:nrow(combs.iso)){
   })
   mcd <- unlist(mcd)
   
-  ifelse(combs.iso$Method[ind] == "subsampling", m <- 1, m <- 2)
+  m <- ifelse(combs.iso$Method[ind] == "subsampling", 1, 2)
   if(combs.iso$rotation[ind] == 0) r <- 1
   if(combs.iso$rotation[ind] == pi/4) r <- 2
   if(combs.iso$scale[ind] == 1) s <- 1
